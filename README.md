@@ -72,54 +72,10 @@ The assistant is designed to be transparent about its data sources, clearly dist
 
 ---
 
-# 🏗 System Architecture
+# ![System Architecture] (Graphmed_arch.jpg)
 
-```text
-┌──────────────────────────────────────────────────────────────────┐
-│                     FRONTEND (React + Tailwind)                  │
-│                     http://localhost:5173                        │
-└───────────────────────────────┬──────────────────────────────────┘
-                                │ POST /query/ask
-                                │ {"question": "..."}
-                                ▼
-┌──────────────────────────────────────────────────────────────────┐
-│                    FASTAPI BACKEND (Python)                      │
-│                     http://localhost:8000                        │
-│                                                                  │
-│  ┌──────────┐   ┌───────────────┐   ┌──────────────────────────┐  │
-│  │  CORS    │──▶│  Validation   │──▶│  Route: /query/ask       │  │
-│  └──────────┘   └───────────────┘   └────────────┬─────────────┘  │
-└──────────────────────────────────────────────────┬───────────────┘
-                                                   │
-                                                   ▼
-┌──────────────────────────────────────────────────────────────────┐
-│                 LLM AGENT (Pydantic AI + Gemini)                 │
-│                                                                  │
-│  ┌─────────────────────┐        ┌─────────────────────────────┐  │
-│  │ Tool 1: neo4j_query │        │ Tool 2: pubmed_search       │  │
-│  │ (Cypher → Neo4j)    │        │ (Terms → PubMed API)        │  │
-│  └──────────┬──────────┘        └──────────────┬──────────────┘  │
-└─────────────┬──────────────────────────────────┬──────────────────┘
-              │                                  │
-              ▼                                  ▼
-┌─────────────────────────┐    ┌────────────────────────────────────┐
-│      NEO4J DATABASE     │    │           PUBMED API               │
-│    (Hetionet Graph)     │    │      (NCBI E-utilities)            │
-│                         │    │                                    │
-│   47,031 Nodes          │    │  esearch.fcgi → Article IDs        │
-│   2,250,197 Relationships│   │  esummary.fcgi → Article Details   │
-└─────────────────────────┘    └────────────────────────────────────┘
-```
+# ![Sequence Diagram] (Sequence.jpg)
 
-## Sequence Diagram
-
-```text
-User → Frontend → FastAPI → LLM Agent → Neo4j (Cypher query)
-                                      → PubMed (Literature search)
-                                      → Synthesis (Combine sources)
-                          ← JSON Response ←
-      ← Rendered Answer ←
-```
 
 ---
 
@@ -276,7 +232,7 @@ GRAPHMED/
 │   ├── app/
 │   │   ├── agents/
 │   │   │   ├── __init__.py
-│   │   │   └── graph_agent.py
+│   │   │   └── agent.py
 │   │   ├── helpers/
 │   │   │   ├── __init__.py
 │   │   │   ├── neo4j_helper.py
