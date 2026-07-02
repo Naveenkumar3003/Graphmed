@@ -71,11 +71,13 @@ The assistant is designed to be transparent about its data sources, clearly dist
 | Testing | Pytest | Integration tests |
 
 ---
+## System Architecture 
 
-# ![System Architecture] (Graphmed_arch.jpg)
+![Architecture](Graphmed_arch.jpg)
 
-# ![Sequence Diagram] (Sequence.jpg)
+## Sequence Diagram
 
+![Sequence Diagram](Sequence_diag.jpg)
 
 ---
 
