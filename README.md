@@ -8,28 +8,28 @@ An intelligent biomedical research assistant that integrates structured knowledg
 
 ---
 
-#  Table of Contents
+## Table of Contents
 
-- [Project Overview](#-project-overview)
-- [Key Features](#-key-features)
-- [Technology Stack](#-technology-stack)
-- [System Architecture](#-system-architecture)
-- [Complete Workflow](#-complete-workflow)
-- [Data Sources](#-data-sources)
-- [Project Structure](#-project-structure)
-- [Setup & Installation](#-setup--installation)
-- [Usage](#-usage)
-- [API Reference](#-api-reference)
-- [Logging](#-logging)
-- [Error Handling](#-error-handling)
-- [Testing](#-testing)
-- [Contributing](#-contributing)
-- [License](#-license)
-- [Contact](#-contact)
-
+- [Project Overview](#project-overview)
+- [Key Features](#key-features)
+- [Technology Stack](#technology-stack)
+- [System Architecture](#system-architecture)
+- [Complete Workflow](#complete-workflow)
+- [Data Sources](#data-sources)
+- [Project Structure](#project-structure)
+- [Setup & Installation](#setup--installation)
+- [Usage](#usage)
+- [API Reference](#api-reference)
+- [Logging](#logging)
+- [Error Handling](#error-handling)
+- [Testing](#testing)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Future Enhancements](#future-enhancements)
 ---
 
-#  Project Overview
+# Project Overview
 
 GraphMed enables researchers and healthcare professionals to query biomedical relationships using natural language. The system uses a single LLM agent (Google Gemini) with a dual-tool architecture that autonomously:
 
@@ -41,7 +41,7 @@ The assistant is designed to be transparent about its data sources, clearly dist
 
 ---
 
-#  Key Features
+# Key Features
 
 | Feature | Description |
 |---------|-------------|
@@ -56,7 +56,7 @@ The assistant is designed to be transparent about its data sources, clearly dist
 
 ---
 
-#  Technology Stack
+# Technology Stack
 
 | Layer | Technology | Purpose |
 |-------|-----------|---------|
@@ -78,7 +78,7 @@ The assistant is designed to be transparent about its data sources, clearly dist
 
 ---
 
-#  Complete Workflow
+# Complete Workflow
 
 ## Step 1: User Input
 
@@ -167,7 +167,7 @@ The LLM combines both sources while following strict rules:
 }
 ```
 
-#  Data Sources
+# Data Sources
 
 ## Hetionet Knowledge Graph
 
@@ -223,7 +223,7 @@ The LLM combines both sources while following strict rules:
 
 ---
 
-#  Project Structure
+# Project Structure
 
 ```text
 GRAPHMED/
@@ -279,7 +279,7 @@ GRAPHMED/
 
 ---
 
-#  Setup & Installation
+# Setup & Installation
 
 ## Prerequisites
 
@@ -405,7 +405,7 @@ npm run dev
 
 ---
 
-#  Usage
+# Usage
 
 ## Example Questions
 
@@ -462,7 +462,7 @@ and PubMed literature. Verify against authoritative clinical sources.
 
 ---
 
-# 📡 API Reference
+# API Reference
 
 ## POST `/query/ask`
 
@@ -540,7 +540,7 @@ Health check endpoint.
 }
 ```
 
-#  Logging
+# Logging
 
 ## Log Location
 
@@ -599,7 +599,7 @@ Metformin is most commonly associated with gastrointestinal adverse effects...
 
 ---
 
-#  Error Handling
+# Error Handling
 
 | Error Type | Strategy | User Impact |
 |------------|----------|-------------|
@@ -614,7 +614,7 @@ Metformin is most commonly associated with gastrointestinal adverse effects...
 
 ---
 
-#  Testing
+# Testing
 
 ## Run Tests
 
@@ -647,7 +647,7 @@ You can test every API endpoint directly from the browser.
 
 ---
 
-#  Contributing
+# Contributing
 
 ## How to Contribute
 
@@ -718,7 +718,7 @@ Submit a Pull Request describing:
 
 ---
 
-#  License
+# License
 
 This project uses the **Hetionet** dataset, which is distributed under the **CC0 1.0 Universal License**.
 
@@ -726,7 +726,7 @@ Please ensure compliance with the licenses of any additional datasets or APIs in
 
 ---
 
-#  Contact
+# Contact
 
 | Role | Name | ID |
 |------|------|----|
@@ -735,7 +735,7 @@ Please ensure compliance with the licenses of any additional datasets or APIs in
 
 ---
 
-#  Environment Variables
+# Environment Variables
 
 | Variable | Description | Example |
 |----------|-------------|---------|
@@ -746,7 +746,7 @@ Please ensure compliance with the licenses of any additional datasets or APIs in
 
 ---
 
-#  Notes
+# Notes
 
 - **Windows Users:** Always use `http://localhost:8000` instead of `http://0.0.0.0:8000`.
 - Ensure the Hetionet database is running before starting the backend.
@@ -755,7 +755,7 @@ Please ensure compliance with the licenses of any additional datasets or APIs in
 
 ---
 
-##  Future Enhancements
+## Future Enhancements
 
 - Implement conversation history to maintain context across multiple user interactions.
 - Add interactive graph visualization for displaying biomedical entities and relationships.
@@ -771,7 +771,7 @@ Please ensure compliance with the licenses of any additional datasets or APIs in
 improved scalability and maintainability
 ---
 
-##  Acknowledgements
+## Acknowledgements
 
 - **Hetionet** for providing the biomedical knowledge graph.
 - **NCBI PubMed** for literature search APIs.
